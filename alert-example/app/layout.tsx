@@ -6,9 +6,8 @@ import ClientLayout from "@/components/5-layout/ClientLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Methode traceability",
-  description:
-    "Application to view the traceability of the Toyota line in Methode",
+  title: "Alert project example",
+  description: "This is a project to see how to use the Alert context",
 };
 
 export default function RootLayout({
