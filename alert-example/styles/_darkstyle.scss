@@ -1,0 +1,98 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "./variables";
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: normal;
+  src: url("/fonts/Avenir.ttc");
+}
+
+@font-face {
+  font-family: "Avenir-Black";
+  font-weight: bold;
+  src: url("/fonts/Avenir-Black.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("/fonts/Avenir-Light.ttf");
+}
+
+// Bulma colors
+$warning: $yellow;
+$primary: $orange;
+$danger: $red;
+$dark: $blue-dark;
+$info: $blue;
+$success: $green;
+$tooltip-background-color-success: $success;
+
+// Data table variables
+$table-striped-row-even-background-color: $blue-dark;
+$table-head-background-color: $black;
+$table-background-color: $blue-darker;
+$table-head-cell-border-width: 0 0 1px !important;
+$table-cell-border-width: 0px !important;
+$table-color: $white;
+$table-cell-heading-color: $white !important;
+$table-row-hover-background-color: $blue;
+
+// Input variable
+$input-background-color: $blue-dark;
+$input-placeholder-color: $grey-lighter;
+$input-color: $white;
+$input-border-color: $blue-medium-dark;
+$input-icon-active-color: $blue !important;
+$input-disabled-background-color: $blue-dark;
+$input-disabled-color: $white;
+$input-disabled-border-color: $blue-medium-dark;
+
+// Card variables
+$card-color: $white;
+$card-background-color: $blue-dark;
+$modal-card-head-background-color: $blue-dark;
+$modal-card-title-color: $white;
+$modal-card-head-border-bottom: 0px;
+$modal-card-foot-border-top: 0px;
+$modal-card-body-background-color: $blue-dark;
+
+// Title variables
+$title-color: $white;
+$subtitle-color: $grey-lighter;
+$label-color: $white;
+$title-family: $light-text;
+$subtitle-family: $light-text;
+
+$family-primary: $normal-text;
+
+$select-color: $white;
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $blue $blue-darker;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $blue-darker;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 10px;
+  border: 3px solid $blue-darker;
+}
+
+html,
+body {
+  color: $white-ter !important;
+  background-color: $blue-darker !important;
+  padding: 0;
+  margin: 0;
+}

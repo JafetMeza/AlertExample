@@ -1,0 +1,67 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "./variables";
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: normal;
+  src: url("/fonts/Avenir.ttc");
+}
+
+@font-face {
+  font-family: "Avenir-Black";
+  font-weight: bold;
+  src: url("/fonts/Avenir-Black.ttf");
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("/fonts/Avenir-Light.ttf");
+}
+
+// Bulma colors
+$warning: $yellow;
+$primary: $green;
+$danger: $red;
+$info: $blue;
+$link: $green_1;
+$success: $green_success;
+$tooltip-background-color-success: $success;
+
+$family-primary: $normal-text;
+
+$select-color: $white;
+
+// table
+$table-head-background-color: $green_1;
+$table-head-cell-color: $white;
+
+// card
+$card-radius: 1rem;
+
+// box
+$box-background-color: $white;
+
+// inputs
+$input-background-color: $white;
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $blue $blue_3;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 5px;
+  border: 3px solid $blue;
+}
