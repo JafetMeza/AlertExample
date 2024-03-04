@@ -1,0 +1,41 @@
+@import "../../../styles/variables";
+
+.container {
+  background-color: $white;
+
+  & .burger {
+    background-color: $white !important;
+  }
+
+  & .image {
+    object-fit: contain;
+    height: auto;
+    width: auto;
+  }
+}
+
+.menu {
+  transition: 0.8s;
+  height: 0px;
+  &.active {
+    height: 200px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  overflow-y: hidden;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  background-color: $white;
+  opacity: 0.9;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  & ul {
+    margin-left: 2rem;
+
+    & li {
+      margin-bottom: 10px;
+    }
+  }
+}

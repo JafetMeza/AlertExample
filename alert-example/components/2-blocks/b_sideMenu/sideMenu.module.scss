@@ -1,0 +1,158 @@
+@import "../../../styles/variables";
+@import "../../../styles//mixins";
+
+$active_radius: 100px !important;
+$radius: 8px !important;
+$transition_time: 0.5s;
+
+.separator {
+  width: 85%;
+  margin-left: 10px;
+  > div {
+    transition: $transition_time;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  > span {
+    color: $gray_2;
+  }
+}
+
+.image {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+}
+
+.text {
+  position: absolute;
+  left: 25px;
+  transition: $transition_time;
+}
+
+.icon {
+  position: absolute;
+  margin-left: -2px !important;
+  font-size: 20px;
+  transition: $transition_time;
+}
+
+.icon_bars {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  > span {
+    padding: 20px;
+    cursor: pointer;
+    border-radius: $radius;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    transition: $transition_time;
+    &:hover {
+      background-color: $blue_1 !important;
+      color: $gray_6 !important;
+    }
+  }
+}
+
+@keyframes iconBarAnimation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes deactivating_link {
+  0% {
+    justify-content: flex-start;
+  }
+  99% {
+    justify-content: flex-start;
+  }
+  100% {
+    justify-content: center;
+  }
+}
+
+.link_button {
+  cursor: pointer;
+  text-align: center;
+  white-space-collapse: collapse;
+  border-width: 1px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  width: 100% !important;
+  transition: $transition_time;
+  &.link_active {
+    background-color: $blue_2 !important;
+    color: $gray_6 !important;
+    border-color: $blue_2 !important;
+  }
+  &:hover {
+    background-color: $blue_3 !important;
+    color: $gray_6 !important;
+  }
+}
+
+.sideMenu {
+  background-color: $white;
+  height: 100vh;
+  margin: 0;
+  transition: $transition_time;
+  position: relative;
+}
+
+.inactive_menu {
+  width: 85px;
+  & .text {
+    opacity: 0;
+  }
+  & .link_button {
+    border-radius: $active_radius;
+  }
+
+  & .icon_bars {
+    animation: iconBarAnimation $transition_time linear;
+  }
+
+  & .separator {
+    height: 0 !important;
+    > div {
+      height: 0;
+    }
+    > span {
+      opacity: 0;
+    }
+  }
+}
+
+.deactivating_menu {
+  & .link_button {
+    justify-content: flex-start !important;
+  }
+}
+
+.active_menu {
+  width: 350px;
+  & .link_button {
+    border-radius: $radius;
+    justify-content: flex-start;
+  }
+  & .icon_bars {
+    justify-content: flex-end;
+    > span {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/variables";
+
+.navBar {
+  background-color: $blue_1;
+}
+
+.back_button {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  &.disabled {
+    pointer-events: none !important;
+    color: transparent;
+  }
+  &:hover {
+    border-color: transparent;
+    color: $blue_2;
+  }
+}
