@@ -1,0 +1,11 @@
+@import "./variables";
+
+:export {
+  info: $blue;
+  danger: $red;
+  primary: $green;
+  warning: $yellow;
+  success: $green_success;
+  black: $black;
+  white: $white;
+}

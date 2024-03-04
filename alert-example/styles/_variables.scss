@@ -1,0 +1,46 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+//-----Colors
+$scheme-main: #f0f0f0;
+
+$blue: #54b6f8;
+$red: #ff3860;
+$yellow: #fcca01;
+$green_success: #6ddf95;
+$green: #46d4bf;
+$white: #fff;
+$black: #000;
+
+$blue_1: #e9f8ff;
+$blue_2: #acdeff;
+$blue_3: #3589ae;
+$green_1: #3d7f7e;
+$green_2: #76c4ae;
+$gray_1: #dee3e6;
+$gray_2: #c6cbce;
+$gray_3: #b0b5b9;
+$gray_4: #9aa2a5;
+$gray_5: #5c676b;
+$gray_6: #2d383c;
+
+$state-unknown: #494d4f;
+$state-emergency: #ff3860;
+$state-finish: #fcca01;
+$state-off: #8e7298;
+$state-reset: #65aef1;
+$state-idle: #acacac;
+$state-busy: #f5890a;
+$state-on: $green_success;
+$states: $state-unknown, $state-emergency, $state-finish, $state-off,
+  $state-reset, $state-idle, $state-busy;
+
+/* #region  FONT FAMILY */
+$normal-text: "Avenir";
+$bold-text: "Avenir-Black";
+$light-text: "Avenir-Light";
+
+//-----Responsive Sizes
+$breakpoint-offset: 40px;
+$tablet: 680px !default;
+$desktop: 1007px + (2 * $breakpoint-offset) !default;
+$widescreen: 1300px + (2 * $breakpoint-offset) !default;
+$full-hd: 1408px + (2 * $breakpoint-offset) !default;
