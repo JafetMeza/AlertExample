@@ -1,0 +1,64 @@
+@import "../../../styles/variables";
+
+$animation_timer: 0.3s;
+$border_radius: 10px;
+$bar_height: 6px;
+$min_height: 85px;
+
+.toast {
+  position: relative;
+  background: $blue_3;
+  margin: 0;
+  margin-bottom: 5px;
+  border-radius: $border_radius;
+  border-color: $black;
+  color: white;
+  width: 410px;
+  min-height: $min_height;
+  opacity: 0;
+  transition: all $animation_timer;
+  transform: translateX(500px);
+  & .toast_content {
+    margin: 0;
+    min-height: calc($min_height - $bar_height);
+  }
+
+  &.toast_ready {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.toast_remove {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+
+  &.toast_none {
+    min-height: 0 !important;
+    height: 0;
+    margin: 0 !important;
+  }
+
+  & .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+  }
+
+  & .delete {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  & .loading_bar {
+    width: 0;
+    transition: all 0.1s;
+    height: 6px;
+    background: white;
+    border-radius: $border_radius;
+    position: absolute;
+    bottom: 0;
+  }
+}
